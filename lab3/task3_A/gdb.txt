@@ -1,0 +1,83 @@
+15	    printf("Enter b: ");
+16	    scanf("%d", &b);
+17	    printf("Enter c: ");
+18	    scanf("%d", &c);
+19	    quadratic(a, b, c, &r1, &r2);
+20	    printf("Roots are %3.2f and %3.2f\n", r1, r2);
+21	}
+Breakpoint 1 at 0x1395: file main.c, line 19.
+Breakpoint 2 at 0x13b0: file main.c, line 20.
+Starting program: /home/snehadip/mtech_user/cs26mt010/lab3/task3_A/L3 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at main.c:19
+19	    quadratic(a, b, c, &r1, &r2);
+Starting program: /home/snehadip/mtech_user/cs26mt010/lab3/task3_A/L3 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at main.c:19
+19	    quadratic(a, b, c, &r1, &r2);
+$1 = 1
+$2 = -5
+$3 = 6
+$4 = 0
+$5 = 0
+A syntax error in expression, near `print &r2'.
+$6 = (float *) 0x7fffffffde90
+$7 = (float *) 0x7fffffffde94
+quadratic (coeff1=1, coeff2=-5, coeff3=6, root1=0x7fffffffde90, root2=0x7fffffffde94) at L3.c:10
+10	    if (coeff1 == 0)
+19	        *root1=(-coeff2+sqrt((coeff2*coeff2)-(4*coeff1*coeff3)))/(2*coeff1);
+Breakpoint 3 at 0x555555555204: file L3.c, line 22.
+$8 = (float *) 0x7fffffffde90
+$9 = (float *) 0x7fffffffde94
+$10 = 0
+$11 = 0
+0x7fffffffde90:	0x00000000
+0x7fffffffde94:	0x00000000
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000555555555395 in main 
+                                                   at main.c:19
+	breakpoint already hit 1 time
+2       breakpoint     keep y   0x00005555555553b0 in main 
+                                                   at main.c:20
+3       breakpoint     keep y   0x0000555555555204 in quadratic at L3.c:22
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep n   0x0000555555555395 in main 
+                                                   at main.c:19
+	breakpoint already hit 1 time
+2       breakpoint     keep y   0x00005555555553b0 in main 
+                                                   at main.c:20
+3       breakpoint     keep y   0x0000555555555204 in quadratic at L3.c:22
+Num     Type           Disp Enb Address            What
+2       breakpoint     keep y   0x00005555555553b0 in main 
+                                                   at main.c:20
+3       breakpoint     keep y   0x0000555555555204 in quadratic at L3.c:22
+#0  quadratic (coeff1=1, coeff2=-5, coeff3=6, 
+    root1=0x7fffffffde90, root2=0x7fffffffde94) at L3.c:19
+#1  0x00005555555553b0 in main () at main.c:19
+Stack level 0, frame at 0x7fffffffde80:
+ rip = 0x555555555209 in quadratic (L3.c:19); 
+    saved rip = 0x5555555553b0
+ called by frame at 0x7fffffffdeb0
+ source language c.
+ Arglist at 0x7fffffffde70, args: coeff1=1, coeff2=-5, 
+    coeff3=6, root1=0x7fffffffde90, root2=0x7fffffffde94
+ Locals at 0x7fffffffde70, Previous frame's sp is 0x7fffffffde80
+ Saved registers:
+  rbp at 0x7fffffffde70, rip at 0x7fffffffde78
+Continuing.
+
+Breakpoint 2, main () at main.c:20
+20	    printf("Roots are %3.2f and %3.2f\n", r1, r2);
+a = 1
+b = -5
+c = 6
+r1 = 3
+r2 = 2
+1: r1 = 3
+2: r2 = 2
+Already logging to gdb.txt.
+Undefined command: "gdb.txt".  Try "help".
